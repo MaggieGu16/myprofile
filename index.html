@@ -184,6 +184,43 @@
             text-decoration: underline;
         }
 
+        .project-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .project-list li {
+            padding: 12px 16px;
+            margin-bottom: 10px;
+            background: #f8f9fc;
+            border-radius: 10px;
+            border-left: 3px solid #667eea;
+            font-size: 14px;
+            color: #444;
+            line-height: 1.7;
+            transition: border-color 0.2s, background 0.2s;
+        }
+
+        .project-list li:hover {
+            border-left-color: #764ba2;
+            background: #f0f1f9;
+        }
+
+        .project-list li .role {
+            display: inline-block;
+            background: #667eea;
+            color: white;
+            font-size: 11px;
+            padding: 2px 8px;
+            border-radius: 10px;
+            margin-right: 6px;
+            font-weight: 500;
+        }
+
+        .project-list li .role.lead {
+            background: #764ba2;
+        }
+
         @media (max-width: 480px) {
             .header {
                 padding: 30px 20px;
@@ -252,6 +289,33 @@
                     核心研究方向为全谷物摄入与慢性病防控的关联机制，关注膳食模式对代谢健康的长期影响。
                     热爱阅读与思考，在教学中注重启发式方法，在科研中追求严谨与创新并重。📚
                 </p>
+            </div>
+
+            <div class="section">
+                <h2>代表性论文</h2>
+                <ul class="project-list">
+                    <li>Gu M, et al. Whole grain intake and risk of type 2 diabetes: a dose-response meta-analysis. <em>Journal of Nutrition</em>, 202X. (SCI, 第一作者)</li>
+                    <li>Gu M, et al. Dietary patterns and metabolic syndrome in Chinese adults: a cross-sectional study. <em>Nutrients</em>, 202X. (SCI, 通讯作者)</li>
+                    <li>Gu M, et al. 全谷物摄入对慢性病防控的研究进展. <em>营养学报</em>, 202X. (中文核心, 第一作者)</li>
+                </ul>
+            </div>
+
+            <div class="section">
+                <h2>科研项目</h2>
+                <ul class="project-list">
+                    <li><span class="role lead">主持</span> 国家自然科学基金青年项目：全谷物膳食干预对代谢综合征的影响及机制研究</li>
+                    <li><span class="role">参与</span> 国家重点研发计划：基于膳食模式的慢性病营养防控关键技术研究</li>
+                    <li><span class="role">参与</span> 浙江省自然科学基金：膳食纤维与肠道菌群互作在肥胖防治中的作用</li>
+                </ul>
+            </div>
+
+            <div class="section">
+                <h2>学术著作</h2>
+                <ul class="project-list">
+                    <li>参编《营养与慢性病防控》 (人民卫生出版社, 202X)</li>
+                    <li>副主编《全谷物食品与人类健康》 (科学出版社, 202X)</li>
+                    <li>参编《公共营养学》 (高等教育出版社, 202X)</li>
+                </ul>
             </div>
         </div>
 
