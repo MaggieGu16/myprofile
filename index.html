@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Maggie Gu 的个人主页：营养与食品卫生学、营养与慢性病管理、全谷物与健康研究，以及教学与科研成果。">
+    <meta name="description" data-en-content="Maggie Gu's academic profile: nutrition and food hygiene, nutrition and chronic disease management, whole grains and health, teaching and research." content="Maggie Gu 的个人主页：营养与食品卫生学、营养与慢性病管理、全谷物与健康研究，以及教学与科研成果。">
     <meta name="theme-color" content="#0f4c3f">
-    <title>Maggie Gu — 营养与食品卫生学 · 个人主页</title>
+    <title data-en="Maggie Gu — Nutrition and Food Hygiene · Academic Profile">Maggie Gu — 营养与食品卫生学 · 个人主页</title>
     <style>
         :root {
             --green-900: #0b3b30;
@@ -125,6 +125,13 @@
             opacity: 0.82;
         }
 
+        .hero-actions {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            gap: 10px;
+        }
+
         .hero-links {
             display: flex;
             flex-wrap: wrap;
@@ -151,6 +158,44 @@
 
         .hero-links a:hover {
             background: rgba(255, 255, 255, 0.16);
+        }
+
+        .lang-switch {
+            display: inline-flex;
+            align-items: center;
+            border: 1px solid rgba(255, 255, 255, 0.4);
+            border-radius: 999px;
+            overflow: hidden;
+        }
+
+        .lang-btn {
+            border: 0;
+            background: transparent;
+            color: rgba(255, 255, 255, 0.85);
+            font-family: inherit;
+            font-size: 12px;
+            padding: 7px 13px;
+            cursor: pointer;
+            transition: background 0.2s ease, color 0.2s ease;
+        }
+
+        .lang-btn + .lang-btn {
+            border-left: 1px solid rgba(255, 255, 255, 0.3);
+        }
+
+        .lang-btn:hover {
+            background: rgba(255, 255, 255, 0.16);
+        }
+
+        .lang-btn.is-active,
+        .lang-btn.is-active:hover {
+            background: var(--white);
+            color: var(--green-800);
+        }
+
+        .lang-btn:focus-visible {
+            outline: 2px solid var(--white);
+            outline-offset: -2px;
         }
 
         .section-nav {
@@ -545,6 +590,7 @@
             }
 
             .hero-links,
+            .lang-switch,
             .section-nav,
             .to-top,
             .skip-link {
@@ -563,146 +609,152 @@
     </style>
 </head>
 <body>
-    <a class="skip-link" href="#main">跳到主要内容</a>
+    <a class="skip-link" href="#main" data-en="Skip to main content">跳到主要内容</a>
 
     <div class="page">
         <header class="hero">
             <div class="hero-main">
                 <div class="avatar" aria-hidden="true">🥗</div>
                 <div class="hero-copy">
-                    <p class="eyebrow">营养与食品卫生学 · 学术个人主页</p>
+                    <p class="eyebrow" data-en="Nutrition and Food Hygiene · Academic profile">营养与食品卫生学 · 学术个人主页</p>
                     <h1>Maggie Gu</h1>
-                    <p class="subtitle">高校教师 · 教学科研并重 · 营养与食品卫生学博士</p>
-                    <p class="hero-summary">聚焦营养与慢性病管理、全谷物与健康研究，致力于将科研成果转化为公共健康实践。</p>
+                    <p class="subtitle" data-en="University faculty · Teaching and research · PhD in Nutrition and Food Hygiene">高校教师 · 教学科研并重 · 营养与食品卫生学博士</p>
+                    <p class="hero-summary" data-en="Research on nutrition and chronic disease management and on whole grains and health, with a commitment to translating research findings into public health practice.">聚焦营养与慢性病管理、全谷物与健康研究，致力于将科研成果转化为公共健康实践。</p>
                 </div>
-                <nav class="hero-links" aria-label="外部链接">
-                    <a href="https://github.com/MaggieGu16" target="_blank" rel="noopener noreferrer">GitHub</a>
-                    <a href="https://github.com/MaggieGu16/myprofile" target="_blank" rel="noopener noreferrer">个人主页仓库</a>
-                </nav>
+                <div class="hero-actions">
+                    <nav class="hero-links" aria-label="外部链接" data-en-aria="External links">
+                        <a href="https://github.com/MaggieGu16" target="_blank" rel="noopener noreferrer">GitHub</a>
+                        <a href="https://github.com/MaggieGu16/myprofile" target="_blank" rel="noopener noreferrer" data-en="Source repository">个人主页仓库</a>
+                    </nav>
+                    <div class="lang-switch" role="group" aria-label="语言切换 / Language">
+                        <button class="lang-btn is-active" type="button" data-lang="zh" aria-pressed="true">中文</button>
+                        <button class="lang-btn" type="button" data-lang="en" aria-pressed="false">English</button>
+                    </div>
+                </div>
             </div>
-            <nav class="section-nav" aria-label="页面章节导航">
-                <a href="#about">关于我</a>
-                <a href="#research">研究方向</a>
-                <a href="#skills">技能</a>
-                <a href="#info">基本信息</a>
-                <a href="#publications">代表性论文</a>
-                <a href="#projects">科研项目</a>
-                <a href="#books">学术著作</a>
-                <a href="#contact">联系</a>
+            <nav class="section-nav" aria-label="页面章节导航" data-en-aria="Page sections">
+                <a href="#about" data-en="About">关于我</a>
+                <a href="#research" data-en="Research">研究方向</a>
+                <a href="#skills" data-en="Skills">技能</a>
+                <a href="#info" data-en="Profile">基本信息</a>
+                <a href="#publications" data-en="Publications">代表性论文</a>
+                <a href="#projects" data-en="Projects">科研项目</a>
+                <a href="#books" data-en="Books">学术著作</a>
+                <a href="#contact" data-en="Contact">联系</a>
             </nav>
         </header>
 
         <div class="sheet">
             <div class="layout" id="main">
-                <aside class="sidebar" aria-label="个人信息与技能">
+                <aside class="sidebar" aria-label="个人信息与技能" data-en-aria="Profile and skills">
                     <section class="panel" id="info">
-                        <h2>基本信息</h2>
+                        <h2 data-en="Profile">基本信息</h2>
                         <div class="info-item">
                             <span class="icon icon-location" aria-hidden="true">📍</span>
-                            <span>中国 · 浙江杭州</span>
+                            <span data-en="Hangzhou, Zhejiang, China">中国 · 浙江杭州</span>
                         </div>
                         <div class="info-item">
                             <span class="icon icon-edu" aria-hidden="true">🎓</span>
-                            <span>北京大学 · 营养与食品卫生学 · 博士</span>
+                            <span data-en="PhD in Nutrition and Food Hygiene, Peking University">北京大学 · 营养与食品卫生学 · 博士</span>
                         </div>
                         <div class="info-item">
                             <span class="icon icon-work" aria-hidden="true">💼</span>
-                            <span>浙江中医药大学 · 专任教师 · 教学与科研并重</span>
+                            <span data-en="Faculty member, Zhejiang Chinese Medical University · Teaching and research">浙江中医药大学 · 专任教师 · 教学与科研并重</span>
                         </div>
                     </section>
 
                     <section class="panel" id="skills">
-                        <h2>技能</h2>
+                        <h2 data-en="Skills">技能</h2>
                         <div class="tag-group">
-                            <p class="tag-label">研究方向</p>
+                            <p class="tag-label" data-en="Research focus">研究方向</p>
                             <div class="tags">
-                                <span class="tag tag--focus">营养与慢性病管理</span>
-                                <span class="tag tag--focus">全谷物与健康</span>
-                                <span class="tag tag--focus">膳食评估与指导</span>
-                                <span class="tag tag--focus">营养流行病学</span>
+                                <span class="tag tag--focus" data-en="Nutrition and chronic disease management">营养与慢性病管理</span>
+                                <span class="tag tag--focus" data-en="Whole grains and health">全谷物与健康</span>
+                                <span class="tag tag--focus" data-en="Dietary assessment and counseling">膳食评估与指导</span>
+                                <span class="tag tag--focus" data-en="Nutritional epidemiology">营养流行病学</span>
                             </div>
                         </div>
                         <div class="tag-group">
-                            <p class="tag-label">方法与工具</p>
+                            <p class="tag-label" data-en="Methods and tools">方法与工具</p>
                             <div class="tags">
                                 <span class="tag tag--method">SPSS</span>
-                                <span class="tag tag--method">R 语言</span>
-                                <span class="tag tag--method">文献管理 (EndNote)</span>
-                                <span class="tag tag--method">数据可视化</span>
+                                <span class="tag tag--method" data-en="R">R 语言</span>
+                                <span class="tag tag--method" data-en="Reference management (EndNote)">文献管理 (EndNote)</span>
+                                <span class="tag tag--method" data-en="Data visualization">数据可视化</span>
                             </div>
                         </div>
                         <div class="tag-group">
-                            <p class="tag-label">教学</p>
+                            <p class="tag-label" data-en="Teaching">教学</p>
                             <div class="tags">
-                                <span class="tag tag--teach">课程设计与教学</span>
+                                <span class="tag tag--teach" data-en="Curriculum design and teaching">课程设计与教学</span>
                             </div>
                         </div>
                     </section>
 
                     <section class="panel" id="contact">
-                        <h2>联系</h2>
-                        <p class="entry-meta">欢迎就营养与慢性病管理、全谷物与健康等方向开展教学与科研合作。联系方式待补充。</p>
+                        <h2 data-en="Contact">联系</h2>
+                        <p class="entry-meta" data-en="We welcome teaching and research collaboration in nutrition and chronic disease management and whole grains and health. Contact details to be added.">欢迎就营养与慢性病管理、全谷物与健康等方向开展教学与科研合作。联系方式待补充。</p>
                     </section>
                 </aside>
 
-                <main class="content" aria-label="主要内容">
+                <main class="content" aria-label="主要内容" data-en-aria="Main content">
                     <section class="section" id="about">
-                        <h2>关于我</h2>
-                        <p>营养与食品卫生学博士，浙江中医药大学专任教师。长期聚焦 <strong>营养与慢性病管理</strong> 及 <strong>全谷物与健康</strong> 领域的研究与教学。致力于将前沿科研成果转化为公共健康实践，培养兼具科学素养与人文关怀的下一代营养专业人才。</p>
+                        <h2 data-en="About">关于我</h2>
+                        <p data-en="PhD in Nutrition and Food Hygiene and faculty member at Zhejiang Chinese Medical University. Long-standing research and teaching focus on <strong>nutrition and chronic disease management</strong> and <strong>whole grains and health</strong>. Committed to translating cutting-edge research into public health practice and to training the next generation of nutrition professionals with both scientific rigor and a humanistic outlook.">营养与食品卫生学博士，浙江中医药大学专任教师。长期聚焦 <strong>营养与慢性病管理</strong> 及 <strong>全谷物与健康</strong> 领域的研究与教学。致力于将前沿科研成果转化为公共健康实践，培养兼具科学素养与人文关怀的下一代营养专业人才。</p>
                     </section>
 
                     <section class="section" id="research">
-                        <h2>研究方向与兴趣</h2>
-                        <p>核心研究方向为全谷物摄入与慢性病防控的关联机制，关注膳食模式对代谢健康的长期影响。热爱阅读与思考，在教学中注重启发式方法，在科研中追求严谨与创新并重。<span aria-hidden="true">📚</span></p>
+                        <h2 data-en="Research interests">研究方向与兴趣</h2>
+                        <p data-en="Core research examines the mechanisms linking whole-grain intake to chronic disease prevention and control, with attention to the long-term effects of dietary patterns on metabolic health. An avid reader and thinker, I emphasize inquiry-based teaching and pursue both rigor and innovation in research.">核心研究方向为全谷物摄入与慢性病防控的关联机制，关注膳食模式对代谢健康的长期影响。热爱阅读与思考，在教学中注重启发式方法，在科研中追求严谨与创新并重。<span aria-hidden="true">📚</span></p>
                     </section>
 
                     <section class="section" id="publications">
-                        <h2>代表性论文</h2>
+                        <h2 data-en="Selected publications">代表性论文</h2>
                         <ul class="entries">
                             <li class="entry">
                                 <p class="entry-title">Whole grain intake and risk of type 2 diabetes: a dose-response meta-analysis</p>
-                                <p class="entry-meta">Gu M, et al. · <em>Journal of Nutrition</em> · 202X · SCI · 第一作者</p>
+                                <p class="entry-meta" data-en="Gu M, et al. · <em>Journal of Nutrition</em> · 202X · SCI · First author">Gu M, et al. · <em>Journal of Nutrition</em> · 202X · SCI · 第一作者</p>
                             </li>
                             <li class="entry">
                                 <p class="entry-title">Dietary patterns and metabolic syndrome in Chinese adults: a cross-sectional study</p>
-                                <p class="entry-meta">Gu M, et al. · <em>Nutrients</em> · 202X · SCI · 通讯作者</p>
+                                <p class="entry-meta" data-en="Gu M, et al. · <em>Nutrients</em> · 202X · SCI · Corresponding author">Gu M, et al. · <em>Nutrients</em> · 202X · SCI · 通讯作者</p>
                             </li>
                             <li class="entry">
-                                <p class="entry-title">全谷物摄入对慢性病防控的研究进展</p>
-                                <p class="entry-meta">Gu M, et al. · <em>营养学报</em> · 202X · 中文核心 · 第一作者</p>
+                                <p class="entry-title" data-en="Research advances in whole-grain intake and chronic disease prevention and control (translated title)">全谷物摄入对慢性病防控的研究进展</p>
+                                <p class="entry-meta" data-en="Gu M, et al. · <em>营养学报</em> · 202X · Chinese core journal · First author · Original title: 全谷物摄入对慢性病防控的研究进展">Gu M, et al. · <em>营养学报</em> · 202X · 中文核心 · 第一作者</p>
                             </li>
                         </ul>
                     </section>
 
                     <section class="section" id="projects">
-                        <h2>科研项目</h2>
+                        <h2 data-en="Research projects">科研项目</h2>
                         <ul class="entries">
                             <li class="entry">
-                                <p class="entry-title"><span class="badge badge--lead">主持</span>国家自然科学基金青年项目：全谷物膳食干预对代谢综合征的影响及机制研究</p>
+                                <p class="entry-title" data-en="<span class=&quot;badge badge--lead&quot;>Lead</span>National Natural Science Foundation of China (Youth Program): Effects and mechanisms of whole-grain dietary intervention on metabolic syndrome"><span class="badge badge--lead">主持</span>国家自然科学基金青年项目：全谷物膳食干预对代谢综合征的影响及机制研究</p>
                             </li>
                             <li class="entry">
-                                <p class="entry-title"><span class="badge">参与</span>国家重点研发计划：基于膳食模式的慢性病营养防控关键技术研究</p>
+                                <p class="entry-title" data-en="<span class=&quot;badge&quot;>Collaborator</span>National Key R&amp;D Program of China: Key technologies for dietary-pattern-based nutrition and chronic disease prevention and control"><span class="badge">参与</span>国家重点研发计划：基于膳食模式的慢性病营养防控关键技术研究</p>
                             </li>
                             <li class="entry">
-                                <p class="entry-title"><span class="badge">参与</span>浙江省自然科学基金：膳食纤维与肠道菌群互作在肥胖防治中的作用</p>
+                                <p class="entry-title" data-en="<span class=&quot;badge&quot;>Collaborator</span>Zhejiang Provincial Natural Science Foundation: The role of dietary fiber and gut microbiota interactions in obesity prevention and treatment"><span class="badge">参与</span>浙江省自然科学基金：膳食纤维与肠道菌群互作在肥胖防治中的作用</p>
                             </li>
                         </ul>
                     </section>
 
                     <section class="section" id="books">
-                        <h2>学术著作</h2>
+                        <h2 data-en="Books and chapters">学术著作</h2>
                         <ul class="entries">
                             <li class="entry">
-                                <p class="entry-title"><span class="badge">参编</span>《营养与慢性病防控》</p>
-                                <p class="entry-meta">人民卫生出版社 · 202X</p>
+                                <p class="entry-title" data-en="<span class=&quot;badge&quot;>Contributor</span>Nutrition and Chronic Disease Prevention and Control (translated title)"><span class="badge">参编</span>《营养与慢性病防控》</p>
+                                <p class="entry-meta" data-en="People's Medical Publishing House · 202X · Original title: 营养与慢性病防控">人民卫生出版社 · 202X</p>
                             </li>
                             <li class="entry">
-                                <p class="entry-title"><span class="badge badge--lead">副主编</span>《全谷物食品与人类健康》</p>
-                                <p class="entry-meta">科学出版社 · 202X</p>
+                                <p class="entry-title" data-en="<span class=&quot;badge badge--lead&quot;>Associate editor</span>Whole Grain Foods and Human Health (translated title)"><span class="badge badge--lead">副主编</span>《全谷物食品与人类健康》</p>
+                                <p class="entry-meta" data-en="Science Press · 202X · Original title: 全谷物食品与人类健康">科学出版社 · 202X</p>
                             </li>
                             <li class="entry">
-                                <p class="entry-title"><span class="badge">参编</span>《公共营养学》</p>
-                                <p class="entry-meta">高等教育出版社 · 202X</p>
+                                <p class="entry-title" data-en="<span class=&quot;badge&quot;>Contributor</span>Public Nutrition (translated title)"><span class="badge">参编</span>《公共营养学》</p>
+                                <p class="entry-meta" data-en="Higher Education Press · 202X · Original title: 公共营养学">高等教育出版社 · 202X</p>
                             </li>
                         </ul>
                     </section>
@@ -712,19 +764,74 @@
             <footer class="footer">
                 <div class="footer-links">
                     <a href="https://github.com/MaggieGu16" target="_blank" rel="noopener noreferrer">GitHub</a>
-                    <a href="https://github.com/MaggieGu16/myprofile" target="_blank" rel="noopener noreferrer">个人主页仓库</a>
+                    <a href="https://github.com/MaggieGu16/myprofile" target="_blank" rel="noopener noreferrer" data-en="Source repository">个人主页仓库</a>
                 </div>
-                <div>Maggie Gu · 营养与食品卫生学</div>
+                <div data-en="Maggie Gu · Nutrition and Food Hygiene">Maggie Gu · 营养与食品卫生学</div>
             </footer>
         </div>
     </div>
 
-    <button class="to-top" id="toTop" type="button" aria-label="回到页面顶部">↑</button>
+    <button class="to-top" id="toTop" type="button" aria-label="回到页面顶部" data-en-aria="Back to top">↑</button>
 
     <script>
         (function () {
+            var bodyText = Array.prototype.slice.call(document.querySelectorAll('body [data-en]'));
+            var ariaText = Array.prototype.slice.call(document.querySelectorAll('[data-en-aria]'));
+            var titleEl = document.querySelector('title[data-en]');
+            var metaEl = document.querySelector('meta[data-en-content]');
+            var buttons = Array.prototype.slice.call(document.querySelectorAll('.lang-btn'));
             var button = document.getElementById('toTop');
             var reduceMotion = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+            var originals = bodyText.map(function (el) { return { el: el, html: el.innerHTML }; });
+            var originalAria = ariaText.map(function (el) { return { el: el, label: el.getAttribute('aria-label') }; });
+            var originalTitle = titleEl.textContent;
+            var originalDescription = metaEl.getAttribute('content');
+
+            function setLang(lang) {
+                var useEnglish = lang === 'en';
+
+                originals.forEach(function (item) {
+                    item.el.innerHTML = useEnglish ? item.el.getAttribute('data-en') : item.html;
+                });
+
+                originalAria.forEach(function (item) {
+                    item.el.setAttribute('aria-label', useEnglish ? item.el.getAttribute('data-en-aria') : item.label);
+                });
+
+                titleEl.textContent = useEnglish ? titleEl.getAttribute('data-en') : originalTitle;
+                metaEl.setAttribute('content', useEnglish ? metaEl.getAttribute('data-en-content') : originalDescription);
+                document.documentElement.lang = useEnglish ? 'en' : 'zh-CN';
+
+                buttons.forEach(function (btn) {
+                    var active = btn.getAttribute('data-lang') === lang;
+                    btn.classList.toggle('is-active', active);
+                    btn.setAttribute('aria-pressed', active ? 'true' : 'false');
+                });
+
+                try {
+                    window.localStorage.setItem('myprofile-lang', lang);
+                } catch (error) {
+                    /* Storage may be disabled; the language still switches for this visit. */
+                }
+            }
+
+            buttons.forEach(function (btn) {
+                btn.addEventListener('click', function () {
+                    setLang(btn.getAttribute('data-lang'));
+                });
+            });
+
+            var saved = null;
+            try {
+                saved = window.localStorage.getItem('myprofile-lang');
+            } catch (error) {
+                saved = null;
+            }
+
+            var browserLanguage = navigator.language || '';
+            var initial = saved || (browserLanguage.toLowerCase().indexOf('en') === 0 ? 'en' : 'zh');
+            setLang(initial);
 
             function updateButton() {
                 button.classList.toggle('is-visible', window.pageYOffset > 360);
